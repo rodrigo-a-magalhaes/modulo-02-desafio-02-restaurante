@@ -16,7 +16,7 @@ interface InputProps {
 }
 
 const Input = (
-  { name, icon: Icon, ...rest }: InputProps) => {
+  { name, icon: Icon, ...rest }: InputProps & React.InputHTMLAttributes<HTMLInputElement>) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const [isFocused, setIsFocused] = useState(false);
