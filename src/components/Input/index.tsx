@@ -1,13 +1,6 @@
-import React, {
-  useEffect,
-  useRef,
-  useState,
-  useCallback,
-} from 'react';
-import { IconType } from 'react-icons';
-
 import { useField } from '@unform/core';
-
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { IconType } from 'react-icons';
 import { Container } from './styles';
 
 interface InputProps {
@@ -15,8 +8,7 @@ interface InputProps {
   icon?: IconType
 }
 
-const Input = (
-  { name, icon: Icon, ...rest }: InputProps & React.InputHTMLAttributes<HTMLInputElement>) => {
+function Input({ name, icon: Icon, ...rest }: InputProps & React.InputHTMLAttributes<HTMLInputElement>) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const [isFocused, setIsFocused] = useState(false);

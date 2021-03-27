@@ -5,6 +5,7 @@ import { Container } from './styles';
 interface HeaderProps {
   openModal: () => void
 }
+
 function Header({ openModal }: HeaderProps) {
   return (
     <Container>

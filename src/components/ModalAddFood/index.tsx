@@ -21,7 +21,7 @@ interface ModalAddFoodProps {
 
 function ModalAddFood({ setIsOpen, handleAddFood, isOpen }: ModalAddFoodProps) {
   const formRef = useRef(null);
-  
+
   async function handleSubmit(data: FoodData) {
     handleAddFood(data);
     setIsOpen();
